@@ -1,8 +1,10 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen">
+      <h1 className="text-4xl">Home Page</h1>
+      <Link href="/blog">Blog</Link>
     </div>
   );
 }

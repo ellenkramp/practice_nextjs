@@ -1,6 +1,14 @@
 import React from "react";
+import { Metadata } from "next";
 
-const DetailsPage = ({ params }: { params: { postid: string } }) => {
+type Props = { params: { postid: string } };
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+  return {
+    title: `Blog Post ${params.postid}`,
+  };
+};
+const DetailsPage = ({ params }: Props) => {
   return (
     <div>
       <h1 className="text-9xl">Details Page {params.postid}</h1>
